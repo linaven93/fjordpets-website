@@ -16,6 +16,7 @@ header {
   align-items: center;
   padding: 20px 40px;
   border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
 }
 
 nav {
@@ -29,7 +30,7 @@ nav a {
   color: #1f2937;
 }
 
-section {
+.hero {
   padding: 120px 40px;
   min-height: 80vh;
   background-image: url("../images/hero.png");
@@ -63,4 +64,29 @@ button {
   width: 120px;
   height: auto;
   display: block;
+}
+
+.services {
+  padding: 80px 40px;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  flex: 1 1 250px;
 }
