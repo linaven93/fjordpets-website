@@ -94,3 +94,10 @@ button {
   padding: 40px 20px;
   text-align: center;
 }
+
+footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
