@@ -90,3 +90,7 @@ button {
   background-color: #f9fafb;
   flex: 1 1 250px;
 }
+.about {
+  padding: 40px 20px;
+  text-align: center;
+}
