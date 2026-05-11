@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   color: #1f2937;
@@ -17,6 +21,9 @@ header {
   padding: 20px 40px;
   border-bottom: 1px solid #e5e7eb;
   background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -28,6 +35,7 @@ nav {
 nav a {
   text-decoration: none;
   color: #1f2937;
+  font-weight: 500;
 }
 
 .hero {
@@ -37,6 +45,9 @@ nav a {
   background-size: cover;
   background-position: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
@@ -49,6 +60,7 @@ p {
   font-size: 18px;
   max-width: 600px;
   margin-bottom: 24px;
+  line-height: 1.6;
 }
 
 button {
@@ -58,6 +70,7 @@ button {
   padding: 12px 22px;
   border-radius: 8px;
   cursor: pointer;
+  width: fit-content;
 }
 
 .logo {
@@ -75,6 +88,7 @@ button {
 .services h2 {
   font-size: 32px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .services-grid {
@@ -90,33 +104,36 @@ button {
   background-color: #f9fafb;
   flex: 1 1 250px;
 }
+
 .about {
-  padding: 60px 40px;
+  padding: 80px 40px;
   text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 30px;
+  font-size: 32px;
 }
 
 .about p {
   max-width: 900px;
-  margin: 0 auto 24px;
-  line-height: 1.6;
+  margin: 30px auto 0;
 }
 
 .about img {
-  width: 300px;
-  height: auto;
+  width: 100%;
+  max-width: 500px;
   border-radius: 10px;
-  margin-top: 20px;
 }
 
-footer {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  margin-top: 40px;
-}
 .gallery {
-  padding: 40px 20px;
+  padding: 80px 40px;
   text-align: center;
+}
+
+.gallery h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
 }
 
 .gallery-grid {
@@ -131,4 +148,81 @@ footer {
   height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  background-color: #f9fafb;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0 auto 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #1f2937;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
+    position: relative;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .services,
+  .about,
+  .gallery {
+    padding: 60px 20px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .services-grid {
+    flex-direction: column;
+  }
 }

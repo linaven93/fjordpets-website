@@ -6,6 +6,7 @@
     <title>FjordPets Hundesalong</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
+
   <body>
     <header>
       <img src="../images/skilt.png" alt="FjordPets logo" class="logo" />
@@ -17,6 +18,8 @@
         <a href="#contact">Kontakt</a>
         <a href="../en/index.html">EN</a>
       </nav>
+
+      <button class="menu-toggle">☰</button>
     </header>
 
     <section class="hero">
@@ -81,6 +84,17 @@
       <p>FjordPets Hundesalong</p>
       <p>E-post: kontakt@fjordpets.no</p>
       <p>Telefon: 123 45 678</p>
+
+      <button>Bestill time</button>
     </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
