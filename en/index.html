@@ -6,44 +6,123 @@
     <title>FjordPets Dog Grooming</title>
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
+
   <body>
     <header>
       <img src="../images/skilt.png" alt="FjordPets logo" class="logo" />
 
       <nav>
-        <a href="#">Services</a>
-        <a href="#">About</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
         <a href="../no/index.html">NO</a>
       </nav>
+
+      <button class="menu-toggle">☰</button>
     </header>
 
     <section class="hero">
-      <h1>Professional grooming with real care</h1>
-      <p>Calm environment, gentle handling and happy dogs.</p>
-      <button>Book appointment</button>
+      <h1>Professional dog grooming with care</h1>
+
+      <p>A calm environment, gentle treatment and happy dogs.</p>
+
+      <a
+        href="https://fjordpets.onlinebooq.net/"
+        target="_blank"
+        class="button-link"
+      >
+        Book appointment
+      </a>
     </section>
 
-    <section class="services">
+    <section id="services" class="services">
       <h2>Services</h2>
 
       <div class="services-grid">
         <div class="card">
           <h3>Full Grooming</h3>
-          <p>Wash, trim and styling tailored to your dog.</p>
+          <p>Wash, trim and styling adapted to your dog’s needs.</p>
         </div>
 
         <div class="card">
           <h3>Bath & Dry</h3>
-          <p>Gentle wash with professional products.</p>
+          <p>Gentle washing with professional products.</p>
         </div>
 
         <div class="card">
           <h3>Nail Trim</h3>
-          <p>Safe and calm nail clipping.</p>
+          <p>Safe and calm nail trimming.</p>
         </div>
       </div>
     </section>
+
+    <section id="about" class="about">
+      <div class="about-content">
+        <h2>About us</h2>
+
+        <img src="../images/about.jpg" alt="Dog grooming salon" />
+
+        <p>
+          FjordPets is a calm and professional dog grooming salon where the
+          dog’s comfort and wellbeing always come first. The salon is run by a
+          trained dog groomer with experience from both Lithuania and Norway.
+          After several years of working in other fields, the decision was made
+          to follow a strong passion for animals. Since then, the focus has been
+          on developing skills in dog grooming, care and styling. Through salon
+          experience and continuous professional development, the goal is to
+          offer gentle, safe and individually adapted treatments for every dog.
+          At FjordPets, patience, calm handling and quality are important in
+          every part of the visit. The goal is that both dogs and owners feel
+          safe, cared for and happy after each appointment.
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Gallery</h2>
+
+      <div class="gallery-grid">
+        <img src="../images/dog1.jpg" alt="Dog grooming" />
+        <img src="../images/dog2.jpg" alt="Dog grooming" />
+        <img src="../images/dog3.jpg" alt="Dog grooming" />
+        <img src="../images/Dog4.jpg" alt="Dog grooming" />
+        <img src="../images/Dog5.jpg" alt="Dog grooming" />
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+
+      <p>Contact us for questions or booking.</p>
+
+      <div class="contact-info">
+        <p>📞 123 45 678</p>
+        <p>✉️ kontakt@fjordpets.no</p>
+        <p>📍 Oslo, Norway</p>
+        <p>🕒 Mon–Fri: 09:00–18:00</p>
+      </div>
+
+      <a
+        href="https://fjordpets.onlinebooq.net/"
+        target="_blank"
+        class="button-link"
+      >
+        Book appointment
+      </a>
+    </section>
+
+    <footer>
+      <p>© 2026 FjordPets Dog Grooming</p>
+    </footer>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
